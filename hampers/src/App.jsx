@@ -1,53 +1,34 @@
 import "./App.css";
-import ham1 from "./assets/hamster.jpg";
-import ham2 from "./assets/better hamper.jpg";
-import expo from "./assets/expolsion.gif"
 
+import hamster from "./assets/hamster.jpg";
+import betterHamper from "./assets/better hamper.jpg";
 
+import file1succ from "./assets/file1succ.png";
+import file2succ from "./assets/file2succ.jpg";
+
+import FileUploader from "./FileUploader";
 
 function App() {
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      console.log("User selected file:", file.name);
-      // do whatever you want with the file here
-    }
-  };
-
-  const triggerFileSelect = () => {
-    document.getElementById("fileInput").click();
-  };
-
-
   return (
     <div className="background">
       <h1>i am under the water</h1>
-        {/* Hidden file input */}
-        <input
-          type="file"
-          id="fileInput"
-          onChange={handleFileChange}
-          hidden
+
+      <main className="hampters">
+        <FileUploader
+          label="Song 1"
+          idleSrc={hamster}
+          successSrc={file1succ}
+          className="hamBut"
         />
-        <main className="hampters">
-          <img 
-            src = {ham1}
-            alt= "hamster"
-            onClick={triggerFileSelect}
-            className="hamBut"
-          />
 
-          <h2>Click Hamster to Choose Song 1</h2>
-
-          {/* <img src = {expo} alt = "expolsion"/> */}
-          <img 
-            src = {ham2}
-            alt= "better hamper"
-            onClick={triggerFileSelect}
-            className="hamBut"
-            />
-        </main>
-      </div>
+        <FileUploader
+          label="Song 2"
+          idleSrc={betterHamper}
+          successSrc={file2succ}
+          className="hamBut"
+        />
+      </main>
+    </div>
   );
 }
 
