@@ -9,7 +9,7 @@ UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 
 @app.route('/', methods=['GET'])
 def home():
-    return {'message': 'Welcome to the file upload API'}, 200
+    return {'message': 'Hello World'}, 200
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file1' not in request.files:
