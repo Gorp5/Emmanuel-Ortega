@@ -9,9 +9,14 @@
   color: white;
   
 }
+html,body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
 
 .background{
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   background-image: url("./assets/pixel.gif");
   background-position: center;
