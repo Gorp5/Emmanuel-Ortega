@@ -14,3 +14,4 @@ export default function Button({ src, alt = "button", onClick, className }: Butt
     </button>
   );
 }
+  

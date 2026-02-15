@@ -1,0 +1,47 @@
+.progressWrap {
+  position: fixed;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  width: 420px; 
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.progressbar {
+  width: 100%;
+  height: 22px;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.progressbarFill {
+  height: 100%;
+  background: green;
+  transition: width 0.5s;
+}
+
+.progressbarPercentage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progressButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}

@@ -2,10 +2,10 @@ import "./App.css";
 
 import hamster from "./assets/hamster.jpg";
 import betterHamper from "./assets/better hamper.jpg";
-
+import "./ProgBar.css"
 import file1succ from "./assets/file1succ.png";
 import file2succ from "./assets/file2succ.jpg";
-
+import ProgBar from "./ProgressBar";
 import FileUploader from "./FileUploader";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           successSrc={file1succ}
           className="hamBut"
         />
-
+        
         <FileUploader
           label="Song 2"
           idleSrc={betterHamper}
@@ -28,6 +28,7 @@ function App() {
           className="hamBut"
         />
       </main>
+            <ProgBar />
     </div>
   );
 }

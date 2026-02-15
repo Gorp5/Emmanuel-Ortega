@@ -13,13 +13,23 @@ export default function FileUploader({
 
   const triggerFileSelect = () => {
     inputRef.current?.click();
+    const fd = new FormData()
+    fd.append('file1', file)
+
+    fetch('https://t3wqx18v-5000.use.devtunnels.ms/upload', {
+        method: "POST",
+        body: fd
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
   };
 
   const handleFileChange = (e) => {
     const picked = e.target.files?.[0] ?? null;
+    console.log(file)
     setFile(picked);
   };
-
+ 
   const shownSrc = file ? successSrc : idleSrc;
 
   return (
